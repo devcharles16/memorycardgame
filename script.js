@@ -10,6 +10,7 @@ const gameContainer = document.getElementById("game");
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let noClicks = false;
+let matchCount = 0;
 
 
 const COLORS = [
@@ -75,6 +76,7 @@ function handleCardClick(event) {
   if (noClicks) return;
   // flip the card, do nothing
   if (event.target.classList.contains("flip")) return;
+  console.log(matchCount)
 
    //change background color
    let selectedColor = event.target.className;
@@ -97,10 +99,11 @@ function handleCardClick(event) {
  
    if (flipCount <2) return;
    if (flipCount == 2 && firstCard.className == secondCard.className) {
+    matchCount +=2;
      function matchedCards(){
        firstCard.classList.remove('flip');
        secondCard.classList.remove('flip');
-       
+       matchCount +=2;
       }
       matchedCards();
     }
@@ -113,14 +116,18 @@ function handleCardClick(event) {
        secondCard.style.backgroundColor = "";
       noClicks = false;
      }
-     setTimeout(resetCards, 1000)
-     if (flipCount===10) 
-     alert("game over!");
-     console.log ("game over");
-    }
-    }
+
      
-  
+     setTimeout(resetCards, 1000)
+    
+    }
+
+    if (matchCount==10) {
+      alert("game over!");
+      console.log ("game over");
+     }
+  }
+   
     /*function restartGame(){
       location.reload()
     }
@@ -131,6 +138,6 @@ function handleCardClick(event) {
 // when the DOM loads
 createDivsForColors(shuffledColors);
 
-}
+  }
 
 

@@ -122,8 +122,7 @@ function handleCardClick(event) {
     }
 
     if (matchCount==10) {
-      alert("game over!");
-      console.log ("game over");
+      alert("Game Over!");
      }
   }
    

@@ -99,11 +99,10 @@ function handleCardClick(event) {
  
    if (flipCount <2) return;
    if (flipCount == 2 && firstCard.className == secondCard.className) {
-    matchCount +=2;
+     matchCount +=2;
      function matchedCards(){
        firstCard.classList.remove('flip');
        secondCard.classList.remove('flip');
-       matchCount +=2;
       }
       matchedCards();
     }
@@ -128,16 +127,8 @@ function handleCardClick(event) {
      }
   }
    
-    /*function restartGame(){
-      location.reload()
-    }
-    restartGame()
-*/
-
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
 
   }
-
-

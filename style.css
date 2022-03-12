@@ -7,7 +7,37 @@
 }
 #restart{
   display: none;
+  margin: auto;
+  text-align: center;
 }
-#start{
+
+.title {
+  margin: auto;
+  width: 40%;
+  border: 3px solid #4c5baf;
+  padding: 10px;
+  text-align: center;
   
+}
+.title #start {
+  margin: auto;
+  background-color: #4c5baf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#restart {
+  margin: auto;
+  background-color: #4c5baf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  font-size: 16px;
 }

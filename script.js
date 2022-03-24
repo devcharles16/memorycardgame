@@ -2,7 +2,8 @@
 function startGame(){
 
 document.getElementById("start").style.visibility="hidden";   
-document.getElementById("restart").style.display="initial";  
+document.getElementById("restart").style.display="initial"; 
+
 
 
 
@@ -108,6 +109,7 @@ function handleCardClick(event) {
     }
     else {
       noClicks = true;
+      
      function resetCards(){
        firstCard.classList.remove('flip');
        secondCard.classList.remove('flip');
@@ -122,8 +124,10 @@ function handleCardClick(event) {
     }
 
     if (matchCount==10) {
-      alert("Game Over!");
+      alert("game over!");
+      console.log ("game over");
      }
+
   }
    
 
@@ -131,3 +135,11 @@ function handleCardClick(event) {
 createDivsForColors(shuffledColors);
 
   }
+
+  function restart()
+  {
+
+    document.getElementById("game").innerHTML = "";
+    document.getElementById("start").style.visibility="initial";   
+    document.getElementById("restart").style.display="none";
+}
